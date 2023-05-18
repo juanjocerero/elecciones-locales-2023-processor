@@ -16,21 +16,23 @@ function App() {
     const municipiosObjects = data.map(row => {
       return {
         municipio: row[6]?.trim(),
-        porcentajeVotantes: Number(row[14]),
+        porcentajeVotantes: row[14] ? (Number(row[14]?.toString().replace(',','.')).toString().replace('.',',')) : null,
         uno: row[23]?.trim(),
-        unoConcejales: Number(row[26]),
+        unoConcejales: Number(row[26]) !== 0 ? Number(row[26]) : null,
         dos: row[28]?.trim(),
-        dosConcejales: Number(row[31]),
+        dosConcejales: Number(row[31]) !== 0 ? Number(row[31]) : null,
         tres: row[33]?.trim(),
-        tresConcejales: Number(row[36]),
+        tresConcejales: Number(row[36]) !== 0 ? Number(row[31]) : null,
         cuatro: row[38]?.trim(),
-        cuatroConcejales: Number(row[41]),
+        cuatroConcejales: Number(row[41]) !== 0 ? Number(row[41]) : null,
         cinco: row[43]?.trim(),
-        cincoConcejales: Number(row[46]),
+        cincoConcejales: Number(row[46]) !== 0 ? Number(row[46]) : null,
         seis: row[48]?.trim(),
-        seisConcejales: Number(row[51])
+        seisConcejales: Number(row[51]) !== 0 ? Number(row[51]) : null
       }
     })
+
+    // console.log(municipiosObjects)
     
     setPaginasPueblosData(municipiosObjects)
   }
@@ -40,7 +42,7 @@ function App() {
       return {
         municipio: row[6]?.trim(),
         masVotado: row[23]?.trim(),
-        porcentajeVoto: Number(row[25]),
+        porcentajeVoto: Number(row[25]?.toString().replace(',','.')).toString().replace('.',','),
         concejales: Number(row[26])
       }
     })
@@ -69,7 +71,7 @@ function App() {
 
     })
 
-    console.log(byParty)
+    // console.log(byParty)
   }
   
   const handleUploadedFile = file => {
