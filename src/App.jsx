@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { each } from 'lodash'
 import { useCSVReader, useCSVDownloader } from 'react-papaparse'
 
 import './App.css'
@@ -31,7 +32,7 @@ function App() {
         seisConcejales: Number(row[51]) !== 0 ? Number(row[51]) : null
       }
     })
-
+    
     // console.log(municipiosObjects)
     
     setPaginasPueblosData(municipiosObjects)
@@ -51,27 +52,79 @@ function App() {
   }
   
   const handleOrderedByParty = data => {
-
-    const byParty = []
-    let tempObj = { psoe: null, pp: null, vox: null, cs: null, podemos: null, iu: null, canda: null, pmas: null, axsi: null }
     
-    data.map(row => {
-
+    const byParty = []
+    
+    data.forEach(row => {
+      
+      let tempObj = { municipio: null, psoe: null, pp: null, vox: null, cs: null, podemos: null, iu: null, canda: null, pmas: null, axsi: null }
+      
       if (row.length > 1) {
-
+        
+        tempObj.municipio = row[6]?.trim()
+        
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
-          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PSC')) {
-            tempObj['psoe'] = Number(row[columnNumber + 2])
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PSOE')) {
+            tempObj['psoe'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
           }
         }
-
-        byParty.push(tempObj)
-
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PP')) {
+            tempObj['pp'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('VOX')) {
+            tempObj['vox'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('CS')) {
+            tempObj['cs'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PARA LA GENTE')) {
+            tempObj['iu'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PODEMOS')) {
+            tempObj['podemos'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PMAS')) {
+            tempObj['pmas'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('AXSI')) {
+            tempObj['axsi'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('UA')) {
+            tempObj['canda'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+          }
+        }
+        
       }
-
+      
+      byParty.push(tempObj)
+      
     })
-
-    // console.log(byParty)
+    
+    console.log(byParty)
+    setDataByParty(byParty)
   }
   
   const handleUploadedFile = file => {
@@ -94,7 +147,7 @@ function App() {
       </>
       )}
       </CSVReader>
-
+      
       {
         (paginaPueblosData?.length || masVotadosData?.length || dataByParty?.length) &&
         <>
@@ -114,6 +167,13 @@ function App() {
         masVotadosData?.length && 
         <CSVDownloader type={Type.Button} filename={'28m-mas-votados'} bom={true} config={{ delimiter: '\t', 'header': true }} data={masVotadosData}>
         <span style={{ fontWeight: 400 }}>Más votados</span>
+        </CSVDownloader>
+      }
+      
+      {
+        dataByParty?.length && 
+        <CSVDownloader type={Type.Button} filename={'28m-por-partidos'} bom={true} config={{ delimiter: '\t', 'header': true }} data={dataByParty}>
+        <span style={{ fontWeight: 400 }}>Por partidos</span>
         </CSVDownloader>
       }
       
