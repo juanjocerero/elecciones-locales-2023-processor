@@ -42,55 +42,50 @@ function App() {
       }
       
       if (!checked) {
-        tempMunicipioObject.porcentajeVotantes = row[14] ? (Number(row[14]?.toString().replace(',','.')).toString().replace('.',',')) : null
+        tempMunicipioObject.porcentajeVotantes = row[14] ? (Number(row[14] / 100)).toString().replace('.', '.') : null
       }
       
       tempMunicipioObject.uno = row[23]?.trim()
+      if (!checked) {
+        tempMunicipioObject.unoPorcentaje = Number(row[25]) !== 0 ? (Number(row[25]) / 100).toString().replace('.', '.') : null
+      }
       tempMunicipioObject.unoConcejales = Number(row[26]) !== 0 ? Number(row[26]) : null
       
-      if (!checked) {
-        tempMunicipioObject.unoPorcentaje = Number(row[25]) !== 0 ? Number(row[26]) : null
-      }
-      
       tempMunicipioObject.dos = row[28]?.trim()
+      if (!checked) {
+        tempMunicipioObject.dosPorcentaje = Number(row[30]) !== 0 ? (Number(row[30]) / 100).toString().replace('.', '.') : null
+      }
       tempMunicipioObject.dosConcejales = Number(row[31]) !== 0 ? Number(row[31]) : null
       
-      if (!checked) {
-        tempMunicipioObject.dosPorcentaje = Number(row[30]) !== 0 ? Number(row[30]) : null
-      }
-      
       tempMunicipioObject.tres = row[33]?.trim()
+      if (!checked) {
+        tempMunicipioObject.tresPorcentaje = Number(row[35]) !== 0 ? (Number(row[35]) / 100).toString().replace('.', '.') : null
+      }
       tempMunicipioObject.tresConcejales = Number(row[36]) !== 0 ? Number(row[36]) : null
       
-      if (!checked) {
-        tempMunicipioObject.tresPorcentaje = Number(row[35]) !== 0 ? Number(row[35]) : null
-      }
-      
       tempMunicipioObject.cuatro = row[38]?.trim()
-      tempMunicipioObject.cuatroConcejales = Number(row[41]) !== 0 ? Number(row[41]) : null
-      
       if (!checked) {
-        tempMunicipioObject.cuatroPorcentaje = Number(row[40]) !== 0 ? Number(row[40]) : null
+        tempMunicipioObject.cuatroPorcentaje = Number(row[40]) !== 0 ? (Number(row[40]) / 100).toString().replace('.', '.') : null
       }
-      
+      tempMunicipioObject.cuatroConcejales = Number(row[41]) !== 0 ? Number(row[41]) : null
+
       tempMunicipioObject.cinco = row[43]?.trim()
+      if (!checked) {
+        tempMunicipioObject.cincoPorcentaje = Number(row[45]) !== 0 ? (Number(row[45]) / 100).toString().replace('.', '.') : null
+      }
       tempMunicipioObject.cincoConcejales = Number(row[46]) !== 0 ? Number(row[46]) : null
       
       if (!checked) {
-        tempMunicipioObject.cincoPorcentaje = Number(row[45]) !== 0 ? Number(row[45]) : null
-      }
-      
-      if (!checked) {
-        tempMunicipioObject.seis = row[48]?.trim(),
+        tempMunicipioObject.seis = row[48]?.trim()
+        tempMunicipioObject.seisPorcentaje = Number(row[50]) !== 0 ? (Number(row[50]) / 100).toString().replace('.', '.') : null
         tempMunicipioObject.seisConcejales = Number(row[51]) !== 0 ? Number(row[51]) : null
-        tempMunicipioObject.seisPorcentaje = Number(row[50]) !== 0 ? Number(row[50]) : null
       }
       
       municipiosObjects.push(tempMunicipioObject)
       
     })
     
-    console.log(municipiosObjects)
+    // console.log(municipiosObjects)
     
     setPaginasPueblosData(municipiosObjects)
   }
