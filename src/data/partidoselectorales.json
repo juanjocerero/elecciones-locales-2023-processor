@@ -1,0 +1,872 @@
+[
+  {
+    "municipio": "Almuñécar",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Almuñécar"
+  },
+  {
+    "municipio": "Jete",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Almuñécar"
+  },
+  {
+    "municipio": "Lentegí",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Almuñécar"
+  },
+  {
+    "municipio": "Otívar",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Almuñécar"
+  },
+  {
+    "municipio": "Baza",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Benamaurel",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Caniles",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Cortes de Baza",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Cuevas del Campo",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Cúllar",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Freila",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Zújar",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Baza"
+  },
+  {
+    "municipio": "Albolote",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Albuñuelas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Alfacar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Armilla",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Atarfe",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Beas de Granada",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Benalúa de las Villas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Cájar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Calicasas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Campotéjar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Cenes de la Vega",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Chimeneas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Churriana de la Vega",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Cogollos de la Vega",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Colomera",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Dehesas Viejas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Deifontes",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Dílar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Domingo Pérez de Granada",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Dúdar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Dúrcal",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "El Valle",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Gójar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Granada",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Guadahortuna",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Güéjar Sierra",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Güevéjar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Huétor de Santillán",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Huétor Vega",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Iznalloz",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Jun",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "La Zubia",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Lecrín",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Maracena",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Moclín",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Monachil",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Montejícar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Montillana",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Nigüelas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Nívar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Ogíjares",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Padul",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Peligros",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Pinos Genil",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Pinos Puente",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Píñar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Pulianas",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Quéntar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Torre-Cardela",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Valderrubio",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Villamena",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Víznar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Granada"
+  },
+  {
+    "municipio": "Alamedilla",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Albuñán",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Aldeire",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Alicún de Ortega",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Alquife",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Beas de Guadix",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Benalúa",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Cogollos de Guadix",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Cortes y Graena",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Darro",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Dehesas de Guadix",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Diezma",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Dólar",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Ferreira",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Fonelas",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Gobernador",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Gor",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Gorafe",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Guadix",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Huélago",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Huéneja",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Jérez del Marquesado",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "La Calahorra",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "La Peza",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Lanteira",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Lugros",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Marchal",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Morelábor",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Pedro Martínez",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Polícar",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Purullena",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Valle del Zalabí",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Villanueva de las Torres",
+    "partido_electoral": "Guadix",
+    "partido_judicial": "Guadix"
+  },
+  {
+    "municipio": "Castilléjar",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Castril",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Galera",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Huéscar",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Orce",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Puebla de Don Fadrique",
+    "partido_electoral": "Baza",
+    "partido_judicial": "Huéscar"
+  },
+  {
+    "municipio": "Agrón",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Algarinejo",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Alhama de Granada",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Arenas del Rey",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Cacín",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Fornes",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Huétor Tájar",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Íllora",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Játar",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Jayena",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Loja",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Montefrío",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Moraleda de Zafayona",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Salar",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Santa Cruz del Comercio",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Ventas de Huelma",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Villanueva Mesía",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Zafarraya",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Zagra",
+    "partido_electoral": "Loja",
+    "partido_judicial": "Loja"
+  },
+  {
+    "municipio": "Albondón",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Albuñol",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Gualchos",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Ítrabo",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Los Guájares",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Lújar",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Molvízar",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Motril",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Polopos",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Rubite",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Salobreña",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Sorvilán",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Torrenueva Costa",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Vélez de Benaudalla",
+    "partido_electoral": "Costa",
+    "partido_judicial": "Motril"
+  },
+  {
+    "municipio": "Almegíjar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Alpujarra de la Sierra",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Bérchules",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Bubión",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Busquístar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Cádiar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Cáñar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Capileira",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Carataunas",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Cástaras",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "El Pinar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Juviles",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "La Tahá",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Lanjarón",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Lobras",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Murtas",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Nevada",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Órgiva",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Pampaneira",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Pórtugos",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Soportújar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Torvizcón",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Trevélez",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Turón",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Ugíjar",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Válor",
+    "partido_electoral": "Órgiva",
+    "partido_judicial": "Órgiva"
+  },
+  {
+    "municipio": "Alhendín",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Chauchina",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Cijuela",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Cúllar Vega",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Escúzar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Fuente Vaqueros",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "La Malahá",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Láchar",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Las Gabias",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Santa Fe",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Vegas del Genil",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  },
+  {
+    "municipio": "Villa de Otura",
+    "partido_electoral": "Granada",
+    "partido_judicial": "Santa Fe"
+  }
+ ]
