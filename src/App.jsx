@@ -42,6 +42,7 @@ function App() {
   const [paginaPueblosData, setPaginasPueblosData] = useState()
   const [masVotadosData, setMasVotadosData] = useState()
   const [dataByParty, setDataByParty] = useState()
+  const [repartoDiputacion, setRepartoDiputacion] = useState([])
   const [checked, setChecked] = useState(false)
   const [isDiputacion, setIsDiputacion] = useState(false)
   const [loaded, setLoaded] = useState(false)
@@ -271,7 +272,8 @@ function App() {
       let finalObject = {
         partido: partidoElectoral.partido_electoral,
         escanos: partidoElectoral.escanos,
-        resultados: []
+        resultados: [],
+        repartoEscanos: []
       }
       
       let municipiosPartido = municipiosPartidosElectorales.filter(e => e.partido_electoral === partidoElectoral.partido_electoral)
@@ -386,6 +388,8 @@ function App() {
         aggregatedPartidoElectoralResults.push(finalObject)
         
       }
+
+      const diputacionDownloadData = []
       
       for (let partidoElectoral of aggregatedPartidoElectoralResults) {
         
@@ -415,12 +419,14 @@ function App() {
         }
         
         for (let i = 0; i < partidosValidos; i++) {
-          partidoElectoral.repartoEscanos.push({ partido: nombresOk[i], escanos: reparto[i] })
+          partidoElectoral.repartoEscanos.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+          diputacionDownloadData.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
         }
+
         
       }
-
-      console.log(aggregatedPartidoElectoralResults)
+    
+      setRepartoDiputacion(diputacionDownloadData)
       
     }
     
@@ -481,6 +487,13 @@ function App() {
           dataByParty?.length && 
           <CSVDownloader type={Type.Button} filename={'28m-por-partidos'} bom={true} config={{ delimiter: '\t', 'header': true }} data={dataByParty}>
           <span style={{ fontWeight: 400 }}>Por partidos</span>
+          </CSVDownloader>
+        }
+        
+        {
+          dataByParty?.length && 
+          <CSVDownloader type={Type.Button} filename={'28m-diputacion'} bom={true} config={{ delimiter: '\t', 'header': true }} data={repartoDiputacion}>
+          <span style={{ fontWeight: 400 }}>Diputación</span>
           </CSVDownloader>
         }
         
