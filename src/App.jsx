@@ -418,13 +418,15 @@ function App() {
       }
       
       for (let i = 0; i < partidosValidos; i++) {
-        partidoElectoral.repartoEscanos.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
-        diputacionDownloadData.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+        if (reparto[i] > 0) {
+          partidoElectoral.repartoEscanos.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+          diputacionDownloadData.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+        }
       }
-      
       
     }
     
+    // console.log(diputacionDownloadData)
     setRepartoDiputacion(diputacionDownloadData)
     
   }
