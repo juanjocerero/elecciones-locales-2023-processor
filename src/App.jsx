@@ -373,133 +373,132 @@ function App() {
         
       }
       
-      finalObject.resultados.push(
-        { partido: 'psoe', votos: byParty.map(e => Number(e['psoe'])).reduce((a,b) => a+b, 0) },
-        { partido: 'pp', votos: byParty.map(e => Number(e['pp'])).reduce((a,b) => a+b, 0) },
-        { partido: 'vox', votos: byParty.map(e => Number(e['vox'])).reduce((a,b) => a+b, 0) },
-        { partido: 'cs', votos: byParty.map(e => Number(e['cs'])).reduce((a,b) => a+b, 0) },
-        { partido: 'iu', votos: byParty.map(e => Number(e['iu'])).reduce((a,b) => a+b, 0) },
-        { partido: 'podemos', votos: byParty.map(e => Number(e['podemos'])).reduce((a,b) => a+b, 0) },
-        { partido: 'pmas', votos: byParty.map(e => Number(e['pmas'])).reduce((a,b) => a+b, 0) },
-        { partido: 'axsi', votos: byParty.map(e => Number(e['axsi'])).reduce((a,b) => a+b, 0) },
-        { partido: 'canda', votos: byParty.map(e => Number(e['canda'])).reduce((a,b) => a+b, 0) },
-        { partido: 'adelante', votos: byParty.map(e => Number(e['adelante'])).reduce((a,b) => a+b, 0) })
-        
-        aggregatedPartidoElectoralResults.push(finalObject)
-        
-      }
-
-      const diputacionDownloadData = []
+      finalObject.resultados.push({ partido: 'psoe', votos: byParty.map(e => Number(e['psoe'])).reduce((a,b) => a+b, 0) },
+      { partido: 'pp', votos: byParty.map(e => Number(e['pp'])).reduce((a,b) => a+b, 0) },
+      { partido: 'vox', votos: byParty.map(e => Number(e['vox'])).reduce((a,b) => a+b, 0) },
+      { partido: 'cs', votos: byParty.map(e => Number(e['cs'])).reduce((a,b) => a+b, 0) },
+      { partido: 'iu', votos: byParty.map(e => Number(e['iu'])).reduce((a,b) => a+b, 0) },
+      { partido: 'podemos', votos: byParty.map(e => Number(e['podemos'])).reduce((a,b) => a+b, 0) },
+      { partido: 'pmas', votos: byParty.map(e => Number(e['pmas'])).reduce((a,b) => a+b, 0) },
+      { partido: 'axsi', votos: byParty.map(e => Number(e['axsi'])).reduce((a,b) => a+b, 0) },
+      { partido: 'canda', votos: byParty.map(e => Number(e['canda'])).reduce((a,b) => a+b, 0) },
+      { partido: 'adelante', votos: byParty.map(e => Number(e['adelante'])).reduce((a,b) => a+b, 0) })
       
-      for (let partidoElectoral of aggregatedPartidoElectoralResults) {
-        
-        partidoElectoral.repartoEscanos = []
-        
-        let partidosValidos = 0
-        let votosOk = []
-        let nombresOk = []
-        let reparto = []
-        
-        for (let i = 0; i < partidoElectoral.resultados.length; i++) {
-          // console.log(partidoElectoral.resultados[i])
-          
-          if (partidoElectoral.resultados[i].votos > partidoElectoral.umbralMinimo) {
-            votosOk[partidosValidos] = partidoElectoral.resultados[i].votos // votos del partido
-            nombresOk[partidosValidos] = partidoElectoral.resultados[i].partido // nombre del partido
-            partidosValidos++
-          }
-        }
-        
-        for (let i = 0; i < partidosValidos; i++) {
-          reparto[i] = 0
-        }
-        
-        for (let i = 0; i < partidoElectoral.escanos; i++) {
-          reparto[getNewEscano(votosOk, reparto, partidosValidos)]++
-        }
-        
-        for (let i = 0; i < partidosValidos; i++) {
-          partidoElectoral.repartoEscanos.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
-          diputacionDownloadData.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
-        }
-
-        
-      }
-    
-      setRepartoDiputacion(diputacionDownloadData)
+      aggregatedPartidoElectoralResults.push(finalObject)
       
     }
     
-    return (
-      <>
-      <h2 style={{ fontWeight: 100 }}>Elecciones locales 2023</h2>
-      <CSVReader onUploadAccepted={(file) => { handleUploadedFile(file) }}>
-      {({ getRootProps, acceptedFile, ProgressBar, getRemoveFileProps }) => (
-        <>
+    const diputacionDownloadData = []
+    
+    for (let partidoElectoral of aggregatedPartidoElectoralResults) {
+      
+      partidoElectoral.repartoEscanos = []
+      
+      let partidosValidos = 0
+      let votosOk = []
+      let nombresOk = []
+      let reparto = []
+      
+      for (let i = 0; i < partidoElectoral.resultados.length; i++) {
+        // console.log(partidoElectoral.resultados[i])
         
-        <div style={{ marginBottom: '1rem' }}>
-        <label htmlFor="is-granada">
-        <input type="checkbox" name="is-granada" id="is-granada" checked={checked} onChange={handleCheckedChange} />
-        Datos de Granada
-        </label>
-        </div>
-        
-        <div style={{ marginBottom: '1rem' }}>
-        <label htmlFor="is-diputacion">
-        <input disabled={!loaded} type="checkbox" name="is-diputacion" id="is-diputacion" checked={isDiputacion} onChange={handleIsDiputacion} />
-        Calcular Diputación
-        </label>
-        </div>
-        
-        
-        <div>
-        <button style={{ fontWeight: 100, minWidth: '33vw' }} type='button' {...getRootProps()}>Subir datos</button>
-        {/* <button style={{ fontWeight: 100 }} {...getRemoveFileProps()}>Limpiar memoria</button> */}
-        </div>
-        <ProgressBar style={{ marginBottom: '1rem' }} />
-        </>
-        )}
-        </CSVReader>
-        
-        {
-          (paginaPueblosData?.length || masVotadosData?.length || dataByParty?.length) &&
-          <>
-          <hr></hr>
-          <h2 style={{ fontWeight: 100 }}>Resultados</h2>
-          </>
+        if (partidoElectoral.resultados[i].votos > partidoElectoral.umbralMinimo) {
+          votosOk[partidosValidos] = partidoElectoral.resultados[i].votos // votos del partido
+          nombresOk[partidosValidos] = partidoElectoral.resultados[i].partido // nombre del partido
+          partidosValidos++
         }
-        
-        {
-          paginaPueblosData?.length && 
-          <CSVDownloader type={Type.Button} filename={'28m-pagina-pueblos'} bom={true} config={{ delimiter: '\t', 'header': false }} data={paginaPueblosData}>
-          <span style={{ fontWeight: 400 }}>Página de pueblos</span>
-          </CSVDownloader>
-        }
-        
-        {
-          masVotadosData?.length && 
-          <CSVDownloader type={Type.Button} filename={'28m-mas-votados'} bom={true} config={{ delimiter: '\t', 'header': true }} data={masVotadosData}>
-          <span style={{ fontWeight: 400 }}>Más votados</span>
-          </CSVDownloader>
-        }
-        
-        {
-          dataByParty?.length && 
-          <CSVDownloader type={Type.Button} filename={'28m-por-partidos'} bom={true} config={{ delimiter: '\t', 'header': true }} data={dataByParty}>
-          <span style={{ fontWeight: 400 }}>Por partidos</span>
-          </CSVDownloader>
-        }
-        
-        {
-          dataByParty?.length && 
-          <CSVDownloader type={Type.Button} filename={'28m-diputacion'} bom={true} config={{ delimiter: '\t', 'header': true }} data={repartoDiputacion}>
-          <span style={{ fontWeight: 400 }}>Diputación</span>
-          </CSVDownloader>
-        }
-        
-        </>
-        )
       }
       
-      export default App
+      for (let i = 0; i < partidosValidos; i++) {
+        reparto[i] = 0
+      }
       
+      for (let i = 0; i < partidoElectoral.escanos; i++) {
+        reparto[getNewEscano(votosOk, reparto, partidosValidos)]++
+      }
+      
+      for (let i = 0; i < partidosValidos; i++) {
+        partidoElectoral.repartoEscanos.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+        diputacionDownloadData.push({ zona: partidoElectoral.partido, partido: nombresOk[i], escanos: reparto[i] })
+      }
+      
+      
+    }
+    
+    setRepartoDiputacion(diputacionDownloadData)
+    
+  }
+  
+  return (
+    <>
+    <h2 style={{ fontWeight: 100 }}>Elecciones locales 2023</h2>
+    <CSVReader onUploadAccepted={(file) => { handleUploadedFile(file) }}>
+    {({ getRootProps, acceptedFile, ProgressBar, getRemoveFileProps }) => (
+      <>
+      
+      <div style={{ marginBottom: '1rem' }}>
+      <label htmlFor="is-granada">
+      <input type="checkbox" name="is-granada" id="is-granada" checked={checked} onChange={handleCheckedChange} />
+      Datos de Granada
+      </label>
+      </div>
+      
+      <div style={{ marginBottom: '1rem' }}>
+      <label htmlFor="is-diputacion">
+      <input disabled={!loaded} type="checkbox" name="is-diputacion" id="is-diputacion" checked={isDiputacion} onChange={handleIsDiputacion} />
+      Calcular Diputación
+      </label>
+      </div>
+      
+      
+      <div>
+      <button style={{ fontWeight: 100, minWidth: '33vw' }} type='button' {...getRootProps()}>Subir datos</button>
+      {/* <button style={{ fontWeight: 100 }} {...getRemoveFileProps()}>Limpiar memoria</button> */}
+      </div>
+      <ProgressBar style={{ marginBottom: '1rem' }} />
+      </>
+      )}
+      </CSVReader>
+      
+      {
+        (paginaPueblosData?.length || masVotadosData?.length || dataByParty?.length) &&
+        <>
+        <hr></hr>
+        <h2 style={{ fontWeight: 100 }}>Resultados</h2>
+        </>
+      }
+      
+      {
+        paginaPueblosData?.length && 
+        <CSVDownloader type={Type.Button} filename={'28m-pagina-pueblos'} bom={true} config={{ delimiter: '\t', 'header': false }} data={paginaPueblosData}>
+        <span style={{ fontWeight: 400 }}>Página de pueblos</span>
+        </CSVDownloader>
+      }
+      
+      {
+        masVotadosData?.length && 
+        <CSVDownloader type={Type.Button} filename={'28m-mas-votados'} bom={true} config={{ delimiter: '\t', 'header': true }} data={masVotadosData}>
+        <span style={{ fontWeight: 400 }}>Más votados</span>
+        </CSVDownloader>
+      }
+      
+      {
+        dataByParty?.length && 
+        <CSVDownloader type={Type.Button} filename={'28m-por-partidos'} bom={true} config={{ delimiter: '\t', 'header': true }} data={dataByParty}>
+        <span style={{ fontWeight: 400 }}>Por partidos</span>
+        </CSVDownloader>
+      }
+      
+      {
+        repartoDiputacion.length > 0 && 
+        <CSVDownloader type={Type.Button} filename={'28m-diputacion'} bom={true} config={{ delimiter: '\t', 'header': true }} data={repartoDiputacion}>
+        <span style={{ fontWeight: 400 }}>Diputación</span>
+        </CSVDownloader>
+      }
+      
+      </>
+      )
+    }
+    
+    export default App
+    
