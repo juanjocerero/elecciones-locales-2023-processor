@@ -47,6 +47,9 @@ function App() {
   const [isDiputacion, setIsDiputacion] = useState(false)
   const [loaded, setLoaded] = useState(false)
   
+  const [generalesData, setGeneralesData] = useState([])
+  const [jaenGeneralesChecked, setJaenGeneralesChecked] = useState(false)
+  
   const handlePaginaPueblos = data => {
     // const municipiosObjects = data.map(row => {
     //   return {
@@ -162,61 +165,71 @@ function App() {
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PSOE')) {
-            tempObj['psoe'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['psoe'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['psoe'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PP')) {
-            tempObj['pp'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['pp'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['pp'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('VOX')) {
-            tempObj['vox'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['vox'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['vox'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('CS')) {
-            tempObj['cs'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['cs'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['cs'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PARA LA GENTE')) {
-            tempObj['iu'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['iu'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['iu'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PODEMOS')) {
-            tempObj['podemos'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['podemos'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['podemos'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PMAS')) {
-            tempObj['pmas'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['pmas'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['pmas'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('AXSI')) {
-            tempObj['axsi'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['axsi'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['axsi'] = Number(row[columnNumber + 2])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('UA')) {
-            tempObj['canda'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['canda'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['canda'] = Number(row[columnNumber + 3])
           }
         }
         
         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) { 
           if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('ADELANTE')) {
-            tempObj['adelante'] = Number(row[columnNumber + 1].replace(',','.')).toString().replace('.',',')
+            // tempObj['adelante'] = Number(row[columnNumber + 2].replace(',','.')).toString().replace('.',',')
+            tempObj['adelante'] = Number(row[columnNumber + 3])
           }
         }
         
@@ -226,6 +239,7 @@ function App() {
       
     })
     
+    console.log(byParty)
     setDataByParty(byParty)
   }
   
@@ -388,6 +402,8 @@ function App() {
       
     }
     
+    // console.log(aggregatedPartidoElectoralResults)
+    
     const diputacionDownloadData = []
     
     for (let partidoElectoral of aggregatedPartidoElectoralResults) {
@@ -429,6 +445,64 @@ function App() {
     // console.log(diputacionDownloadData)
     setRepartoDiputacion(diputacionDownloadData)
     
+  }
+  
+  const handlePaginaPueblosGenerales = data => {
+    
+    const outputData = []
+    
+    each(data, row => {
+      
+      if (row.length > 1) {
+        
+        let municipioObject = {}
+        
+        municipioObject.municipio = row[6].trim()
+        
+        for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
+          
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PP')) {
+            municipioObject.pp = (Number(row[columnNumber+2]) / 100).toString().replace('.',',')
+          }
+          
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('PSOE')) {
+            municipioObject.psoe = (Number(row[columnNumber+2]) / 100).toString().replace('.',',')
+          }
+          
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('VOX')) {
+            municipioObject.vox = (Number(row[columnNumber+2]) / 100).toString().replace('.',',')
+          }
+          
+          
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('SUMAR')) {
+            municipioObject.sumar = (Number(row[columnNumber+2]) / 100).toString().replace('.',',')
+          }
+          
+          if (typeof row[columnNumber] === 'string' && row[columnNumber].includes('JM+')) {
+            municipioObject.jmm = (Number(row[columnNumber+2]) / 100).toString().replace('.',',')
+          }
+        }
+        
+        
+        outputData.push(municipioObject)
+      }
+      
+    })
+    
+    setGeneralesData(outputData)
+    
+  }
+  
+  const handleGeneralesFile = file => {
+    setGeneralesData(file.data)
+    
+    handlePaginaPueblosGenerales(file.data)
+    
+    setLoaded(true)
+  }
+  
+  const handleJaenGeneralesChecked = () => {
+    setJaenGeneralesChecked(!jaenGeneralesChecked)
   }
   
   return (
@@ -498,9 +572,48 @@ function App() {
         </CSVDownloader>
       }
       
-      </>
-      )
-    }
-    
-    export default App
-    
+      {/* Aquí empiezan las generales 23J */}
+      
+      <hr></hr>
+      
+      <h2 style={{ fontWeight: 100 }}>Elecciones generales 23J</h2>
+      
+      <div style={{ marginBottom: '1rem' }}>
+      <label htmlFor="is-generales-jaen">
+      <input type="checkbox" name="is-generales-jaen" id="is-generales-jaen" checked={jaenGeneralesChecked} onChange={handleJaenGeneralesChecked} />
+      Datos de Jaén
+      </label>
+      </div>
+      
+      <CSVReader onUploadAccepted={(file) => { handleGeneralesFile(file) }}>
+      {({ getRootProps, acceptedFile, ProgressBar, getRemoveFileProps }) => (
+        <>
+        
+        <div>
+        <button style={{ fontWeight: 100, minWidth: '33vw' }} type='button' {...getRootProps()}>Subir datos</button>
+        {/* <button style={{ fontWeight: 100 }} {...getRemoveFileProps()}>Limpiar memoria</button> */}
+        </div>
+        <ProgressBar style={{ marginBottom: '1rem' }} />
+        </>
+        )}
+        </CSVReader>
+        
+        {
+          (generalesData?.length > 0) &&
+          <>
+          <hr></hr>
+          <h2 style={{ fontWeight: 100 }}>Resultados</h2>
+          
+          
+          <CSVDownloader type={Type.Button} filename={'23j-pagina-pueblos'} bom={true} config={{ delimiter: '\t', 'header': true, columns: ['municipio', 'pp', 'psoe', 'vox', 'sumar', jaenGeneralesChecked ? 'jmm' : null]}} data={generalesData}>
+          <span style={{ fontWeight: 400 }}>Página de pueblos</span>
+          </CSVDownloader>
+          </>
+        }
+        
+        </>
+        )
+      }
+      
+      export default App
+      
